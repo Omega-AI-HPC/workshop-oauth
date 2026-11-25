@@ -1,1 +1,47 @@
-<!doctype html><meta charset="utf-8"><title>Workshop OAuth</title><p>OAuth redirect pages for the Workshop desktop app. Nothing is stored here.</p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workshop: your AI canvas for Slack, Jira, Gmail and GitHub</title>
+<meta name="description" content="Workshop turns questions into charts, tables and drafts on a visual canvas, using Slack, Jira, Gmail and GitHub. Runs on your own computer.">
+<meta name="slack-app-id" content="A0CLMSASB2R">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="./">Workshop</a><nav><a href="#how">How it works</a><a href="#install">Install</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav></div></header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Ask a question. Get a chart, a table or a draft.</h1>
+    <p>Workshop is an AI assistant with a visual canvas. Connect Slack and ask what your team decided, what changed this week or what is still open. Workshop reads what you can already see and answers on the canvas.</p>
+    <a class="btn" href="#install">Get Workshop</a><a class="btn secondary" href="#how">How it works</a>
+  </div>
+
+  <section id="how">
+    <h2>What you can do with Slack</h2>
+    <div class="grid">
+      <div class="card"><h3>Summarize</h3><p>"Summarize the last 20 messages in #release." Workshop reads the channel and writes a short summary.</p></div>
+      <div class="card"><h3>Search and chart</h3><p>"Find messages about the launch this week and show them in a table." Results land on your canvas.</p></div>
+      <div class="card"><h3>Draft, then confirm</h3><p>Workshop drafts a message for you. Nothing is posted until you confirm it with a button, a typed "send" or your voice.</p></div>
+      <div class="card"><h3>Your data stays with you</h3><p>Workshop runs on your computer. Your Slack token and messages stay on your machine and are never used to train models.</p></div>
+    </div>
+  </section>
+
+  <section id="install">
+    <h2>Install</h2>
+    <ol>
+      <li>Download the latest Workshop release and start it on your computer (instructions are included in the download).</li>
+      <li>Open Workshop, go to <strong>Settings &gt; Slack</strong> and click <strong>Connect with Slack</strong>.</li>
+      <li>Choose your workspace on Slack's page and click <strong>Allow</strong>. You are done: ask Workshop a question about your Slack.</li>
+    </ol>
+    <p class="note">Sending messages is off by default. Turn it on in Settings &gt; Slack if you want Workshop to post drafts you confirm. You can disconnect at any time in Settings, which revokes Workshop's access.</p>
+  </section>
+
+  <section>
+    <h2>AI disclaimer</h2>
+    <p class="note">Workshop uses a large language model (OpenAI) to understand requests and write answers. AI output can be inaccurate, so check important results. Workshop never posts to Slack without your explicit confirmation.</p>
+  </section>
+</main>
+<footer><div class="wrap"><a href="support.html">Support</a><a href="privacy.html">Privacy policy</a><span>Workshop by Omega AI</span></div></footer>
+</body>
+</html>

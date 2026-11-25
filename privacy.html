@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workshop Privacy Policy</title>
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="./">Workshop</a><nav><a href="./#install">Install</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav></div></header>
+<main class="wrap doc">
+<h1>Privacy Policy</h1>
+<p class="note">Last updated: 26 November 2026</p>
+
+<p>Workshop is a desktop application made by {{COMPANY_NAME}} ("we"). It runs on your own computer. This policy explains what Workshop does with data from Slack and the other services you connect.</p>
+
+<h2>What we collect</h2>
+<p>We, the developer, do not collect your Slack data. Workshop runs locally and there is no server operated by us that receives your messages, files or tokens.</p>
+
+<h2>What Workshop accesses on your computer</h2>
+<p>When you connect Slack, Workshop receives an access token for your Slack account and stores it in a file on your computer that only your user account can read. Workshop reads channels, messages, files, canvases, lists and user names that you can already see in Slack, and only when you ask it a question that needs them. If you turn on sending, Workshop can post a message you drafted, only after you confirm that exact message.</p>
+
+<h2>What is sent to third parties</h2>
+<p>To answer a request, Workshop sends your request and the Slack content needed for it to the OpenAI API. OpenAI processes it under its API data policy; API data is not used to train OpenAI models. Slack data is never used to train any model, and is never sold or shared for advertising.</p>
+
+<h2>What is kept and for how long</h2>
+<ul>
+<li>The Slack token stays on your computer until you click Disconnect in Workshop, which revokes it at Slack and deletes it.</li>
+<li>Slack message text is not stored, except in answers you choose to keep on your canvas.</li>
+<li>A local log records each message you send through Workshop (channel and time, not the text).</li>
+<li>You can delete all local Workshop data at any time by removing its data folder.</li>
+</ul>
+
+<h2>Data Workshop receives but does not use</h2>
+<p>Slack returns some fields with each request (for example profile details). Workshop uses only what your request needs and does not store the rest.</p>
+
+<h2>Your choices and rights</h2>
+<ul>
+<li>Disconnect Slack in Workshop Settings at any time.</li>
+<li>Remove the Workshop app from your Slack workspace settings.</li>
+<li>Access, export or delete your local data yourself; because we hold no copy, there is nothing for us to export or delete. If you need help, contact us below and we answer within 2 business days.</li>
+</ul>
+
+<h2>Security</h2>
+<p>All connections use HTTPS (TLS 1.2 or later). Sign-in uses OAuth with PKCE and a single-use state value. Tokens are never shown in the app or written to logs.</p>
+
+<h2>Contact</h2>
+<p>{{COMPANY_NAME}}<br>{{POSTAL_ADDRESS}}<br>Email: <a href="mailto:{{PRIVACY_EMAIL}}">{{PRIVACY_EMAIL}}</a></p>
+</main>
+<footer><div class="wrap"><a href="./">Home</a><a href="support.html">Support</a><span>Workshop by Omega AI</span></div></footer>
+</body>
+</html>
