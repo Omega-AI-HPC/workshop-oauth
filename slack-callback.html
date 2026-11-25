@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-rixJ9vnZah/2F2JIiqpTNjCXOAL4wwMA7Vc7XCjiQSM='; style-src 'unsafe-inline'">
+<title>Workshop: returning to the app</title>
+<style>body{font:15px system-ui,sans-serif;background:#0b1530;color:#dce9ff;display:grid;place-items:center;min-height:100vh;margin:0}p{max-width:30em;text-align:center}</style>
+</head>
+<body>
+<p id="m">Returning to Workshop on this computer…</p>
+<script>
+// OAuth redirect bounce for the Workshop desktop app. Slack requires an HTTPS redirect URL; Workshop runs locally, so this
+// static page forwards ONLY code, state and error to the user's own machine. It stores nothing and loads nothing else.
+// The code is single use and bound to the local app's PKCE verifier and state, so it is useless to anyone else.
+(function () {
+  var q = new URLSearchParams(location.search), out = new URLSearchParams();
+  ['code', 'state', 'error'].forEach(function (k) { var v = q.get(k); if (v && v.length <= 2048) out.set(k, v); });
+  var m = /(?:^#|&)port=(\d{2,5})(?:&|$)/.exec(location.hash), port = m && +m[1] > 0 && +m[1] < 65536 ? m[1] : '8787';
+  if (!out.has('state') || !(out.has('code') || out.has('error'))) { document.getElementById('m').textContent = 'Nothing to forward. You can close this tab.'; return; }
+  history.replaceState(null, '', location.pathname); // drop the code from this page's history entry
+  location.replace('http://localhost:' + port + '/api/oauth/slack/callback?' + out.toString());
+})();
+</script>
+</body>
+</html>
